@@ -187,6 +187,14 @@
       .chip.active { background: var(--asphalt); border-color:var(--asphalt); color:#fff; }
       .empty-note { font-style:italic; margin-top:1rem; }
 
+      /* reviews */
+      .review-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem; margin-top:1.5rem; }
+      .review-card { background:#fff; border-radius:10px; padding:1.25rem 1.4rem 1.4rem; }
+      .review-stars { display:flex; gap:.15rem; color: var(--orange); margin-bottom:.7rem; }
+      .review-text { font-size:.92rem; line-height:1.55; margin-bottom:1rem; }
+      .review-meta { display:flex; justify-content:space-between; align-items:baseline; gap:.6rem; font-family:var(--font-m); font-size:.78rem; color: var(--steel); }
+      .review-author { font-weight:700; color: var(--asphalt); }
+
       /* page hero */
       .page-hero { background: var(--asphalt); padding:3rem 0; }
       .page-hero h1 { color:#fff; font-size:clamp(1.8rem,5vw,2.6rem); }

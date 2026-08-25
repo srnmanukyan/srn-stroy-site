@@ -1,11 +1,5 @@
-export const projects = [
-  { id: "p1", title: "Ремонт участка дублёра Ленинградского шоссе", cityId: "khimki", year: "2025", area: "3.2 км", status: "Завершён", description: "Фрезерование старого покрытия, укладка нового асфальта в два слоя.", image: "" },
-  { id: "p2", title: "Асфальтирование дворовых территорий, мкр. Куркино", cityId: "khimki", year: "2024", area: "12 500 м²", status: "Завершён", description: "Комплексное благоустройство дворов с устройством парковок.", image: "" },
-  { id: "p3", title: "Реконструкция проезда к ЖК на Ильинском шоссе", cityId: "krasnogorsk", year: "2025", area: "1.8 км", status: "Завершён", description: "Расширение проезжей части, устройство освещения и разметки.", image: "" },
-  { id: "p4", title: "Ремонт дорог в мкр. Наташинский парк", cityId: "lyubertsy", year: "2024", area: "2.1 км", status: "Завершён", description: "Капитальный ремонт с заменой бордюрного камня.", image: "" },
-  { id: "p5", title: "Строительство подъездной дороги к логистическому комплексу", cityId: "balashikha", year: "2025", area: "1.5 км", status: "В работе", description: "Новое строительство с усиленным основанием под грузовой трафик.", image: "" },
-  { id: "p6", title: "Ямочный ремонт проездов у Ярославского шоссе", cityId: "mytishchi", year: "2024", area: "—", status: "Завершён", description: "Точечный ремонт покрытия по заявкам управляющей компании.", image: "" },
-  { id: "p7", title: "Асфальтирование парковки торгового центра", cityId: "odintsovo", year: "2025", area: "8 000 м²", status: "Завершён", description: "Устройство парковки с разметкой и ливневым отводом.", image: "" },
-  { id: "p8", title: "Ремонт дорог наукограда, ул. Циолковского", cityId: "korolev", year: "2023", area: "1.2 км", status: "Завершён", description: "Восстановление покрытия и тротуарной зоны.", image: "" },
-  { id: "p9", title: "Строительство дороги к промышленной зоне", cityId: "podolsk", year: "2025", area: "2.4 км", status: "В работе", description: "Проектирование и строительство подъездной дороги под ключ.", image: "" },
-];
+import projectsData from "./projects.json";
+
+// Editable via the admin panel — this file just re-exports the JSON so every
+// existing `import { projects } from "../data/projects"` keeps working.
+export const projects = projectsData;

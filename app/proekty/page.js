@@ -3,7 +3,6 @@ import Footer from "../../components/Footer";
 import { PageHero, ProjectCard } from "../../components/Shared";
 import { projects } from "../../data/projects";
 import { cities } from "../../data/cities";
-import { demo_project_images as DEMO_IMAGES } from "../../data/demo_project_images";
 
 export const metadata = {
   title: "Наши работы — СРН-Строй",
@@ -20,7 +19,7 @@ export default function ProjectsPage() {
         <div className="container">
           <div className="project-grid">
             {projects.map((p) => (
-              <ProjectCard key={p.id} project={p} cityName={cityName(p.cityId)} photos={DEMO_IMAGES[p.id]} />
+              <ProjectCard key={p.id} project={p} cityName={cityName(p.cityId)} photos={p.photos} />
             ))}
           </div>
         </div>

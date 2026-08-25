@@ -4,7 +4,7 @@ import { ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { PageHero } from "./Shared";
-import { demo_project_images as DEMO_IMAGES } from "../data/demo_project_images";
+
 
 function Lightbox({ photos, index, setIndex, onClose }) {
   return (
@@ -23,7 +23,7 @@ function Lightbox({ photos, index, setIndex, onClose }) {
 
 export default function ProjectDetailClient({ project, cityName }) {
   const [lightboxIndex, setLightboxIndex] = useState(null);
-  const photos = DEMO_IMAGES[project.id] || [];
+  const photos = project.photos || [];
 
   return (
     <div className="site">
