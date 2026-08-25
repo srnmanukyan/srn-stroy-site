@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Check, Layers, ArrowRight } from "lucide-react";
+import { MapPin, Check, Layers, ArrowRight, Star } from "lucide-react";
 import { Icon } from "./Icon";
 
 export function PageHero({ eyebrow, title, subtitle }) {
@@ -35,6 +35,24 @@ export function ServiceCard({ service }) {
       <p>{service.description}</p>
       <span className="service-more">Подробнее <ArrowRight size={14} /></span>
     </Link>
+  );
+}
+
+export function ReviewCard({ review }) {
+  const rating = Math.max(0, Math.min(5, Number(review.rating) || 5));
+  return (
+    <div className="review-card">
+      <div className="review-stars" aria-label={`Оценка ${rating} из 5`}>
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star key={i} size={16} fill={i < rating ? "currentColor" : "none"} />
+        ))}
+      </div>
+      <p className="review-text">{review.text}</p>
+      <div className="review-meta">
+        <span className="review-author">{review.author}</span>
+        {review.date && <span className="review-date">{review.date}</span>}
+      </div>
+    </div>
   );
 }
 

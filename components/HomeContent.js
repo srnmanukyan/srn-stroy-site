@@ -8,7 +8,7 @@ import { cities } from "../data/cities";
 import { services } from "../data/services";
 import { projects } from "../data/projects";
 import { stats } from "../data/stats";
-import { demo_project_images as DEMO_IMAGES } from "../data/demo_project_images";
+
 
 export default function HomeContent({ citySlug }) {
   const city = cities.find((c) => c.id === citySlug) || cities[0];
@@ -59,7 +59,7 @@ export default function HomeContent({ citySlug }) {
           </div>
           <div className="project-grid">
             {featured.map((p) => (
-              <ProjectCard key={p.id} project={p} cityName={cities.find((c) => c.id === p.cityId)?.name || ""} photos={DEMO_IMAGES[p.id]} />
+              <ProjectCard key={p.id} project={p} cityName={cities.find((c) => c.id === p.cityId)?.name || ""} photos={p.photos} />
             ))}
           </div>
         </div>
